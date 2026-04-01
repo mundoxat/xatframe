@@ -1,11 +1,6 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./js/themes.js"></script>
-  <script>
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-</script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     const status = [
@@ -466,7 +461,11 @@ document.getElementById("panel_text").textContent = "Close Panel";
   // Run when page is ready
   document.addEventListener('DOMContentLoaded', loadMediaData);
 </script>
-
+<script>
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
 <div id="wrapper">
 <div id="profile">
 <div id="banner">
