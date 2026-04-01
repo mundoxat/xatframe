@@ -1,0 +1,106 @@
+<style>
+body{
+margin:0;
+background:url('https://xatimg.com/image/6BFX2vtRkdbB.png')center/cover;
+overflow:hidden;
+}
+
+#overlay{
+width:100%;
+height:100%;
+background:url('https://xatimg.com/image/xvwj7vyCGNRk.png')center/cover;
+}
+
+@keyframes move-background {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  50% { 
+    -webkit-transform: translate3d(500px, 0px, 0px);
+opacity:0.2;
+  }
+100% {
+-webkit-transform: translate3d(1000px, 0px, 0px);
+}
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {    
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.clouds{
+  width:10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity:0.4;
+
+   -moz-animation:move-background 20s linear infinite;
+  -ms-animation:move-background 20s linear infinite;
+  -o-animation:move-background 20s linear infinite;
+  -webkit-animation:move-background 20s linear infinite;
+  animation:move-background 20s linear infinite;
+}
+
+.snow, .snow:before, .snow:after {
+  opacity:0.6;
+  position: absolute;
+  top: -600px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(4px 4px at 75px 288px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 227px 74px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 297px 130px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 471px 356px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 555px 400px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 34px 234px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 336px 514px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 254px 116px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 527px 172px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 577px 549px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 592px 40px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 595px 9px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 189px 72px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 207px 25px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 537px 130px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 450px 285px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 548px 543px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 46px 51px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 204px 335px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 430px 212px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 22px 365px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 287px 219px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 413px 291px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 335px 24px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 320px 96px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 547px 321px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 141px 463px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 89px 55px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 468px 233px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 299px 523px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 231px 390px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 469px 87px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 44px 316px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 311px 536px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 595px 360px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 465px 466px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 445px 140px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 508px 430px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 346px 414px, rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 84px 450px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 202px 13px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 483px 496px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 260px 389px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 213px 217px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 199px 145px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 257px 326px, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 591px 262px, white 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 481px 517px, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0)), radial-gradient(4px 4px at 433px 390px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0)), radial-gradient(3px 3px at 132px 260px, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 0));
+  background-size: 600px 600px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -200px;
+  opacity: 0.4;
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+  animation-duration: 9s;
+  animation-direction: reverse;
+  margin-left: -300px;
+  opacity: 0.65;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(600px);
+  }
+}
+
+</style>
+
+<div class="snow"></div>
+
+<div id="overlay">
+</div>
+
+<div class="background-container">
+<div class="twinkling"></div>
+<div class="clouds"></div>

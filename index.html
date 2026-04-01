@@ -1,0 +1,2905 @@
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://discordapp.com/assets/1.952ab5e76789f55f8013.css" rel="stylesheet">
+
+</head>
+
+<script>
+
+var link = [];
+link[0] = "https://webgeardarko.github.io/discord/css/erased.css";
+link[1] = "https://webgeardarko.github.io/discord/css/erased2.css";
+link[2] = "https://webgeardarko.github.io/discord/css/geass.css";
+link[3] = "https://webgeardarko.github.io/discord/css/geass2.css";
+link[4] = "https://webgeardarko.github.io/discord/css/hig.css";
+link[5] = "https://webgeardarko.github.io/discord/css/hig2.css";
+link[6] = "https://webgeardarko.github.io/discord/css/hig3.css";
+link[7] = "https://webgeardarko.github.io/discord/css/hig4.css";
+link[8] = "https://webgeardarko.github.io/discord/css/orange.css";
+link[9] = "https://webgeardarko.github.io/discord/css/orange2.css";
+link[10] = "https://webgeardarko.github.io/discord/css/umi.css";
+link[11] = "https://webgeardarko.github.io/discord/css/umi2.css";
+link[12] = "https://webgeardarko.github.io/discord/css/umi3.css";
+link[13] = "https://webgeardarko.github.io/discord/css/umi4.css";
+link[14] = "https://webgeardarko.github.io/discord/css/yakumo.css";
+link[15] = "https://webgeardarko.github.io/discord/css/amy.css";
+link[16] = "https://neradeniye.github.io/xatframe/css/cosette.css";
+
+
+$(function() {
+    var style = link[Math.floor(Math.random() * link.length )];
+    if (document.createStyleSheet){
+        document.createStyleSheet(style);
+    }else{
+        $('<link />',{
+            rel :'stylesheet',
+            type:'text/css',
+            href: style
+        }).appendTo('head');
+    }
+});
+
+</script>
+
+<style>
+
+.rain__drop {
+  -webkit-animation-delay: calc(var(--d) * 2.2s);
+          animation-delay: calc(var(--d) * 2.2s);
+  -webkit-animation-duration: calc(var(--a) * 2.2s);
+          animation-duration: calc(var(--a) * 2.2s);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  height: 30px;
+  left: calc(var(--x) * 1%);
+  position: absolute;
+  top: calc((var(--y) + 50) * -1px);
+z-index:100;
+pointer-events: none;
+opacity:0.1;
+}
+.rain__drop path {
+  fill: #a1c6cc;
+  opacity:0.5;
+  transform: scaleY(calc(var(--s) * 1.5));
+}
+@-webkit-keyframes drop {
+  90% {
+    opacity: 1;
+transform: rotate(105deg)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(200vh);
+  }
+}
+@keyframes drop {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(200vh);
+  }
+}
+
+@keyframes move-background {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  50% { 
+    -webkit-transform: translate3d(500px, 0px, 0px);
+opacity:0.2;
+  }
+100% {
+-webkit-transform: translate3d(1000px, 0px, 0px);
+}
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {    
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.clouds{
+  width:10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity:0.4;
+
+   -moz-animation:move-background 20s linear infinite;
+  -ms-animation:move-background 20s linear infinite;
+  -o-animation:move-background 20s linear infinite;
+  -webkit-animation:move-background 20s linear infinite;
+  animation:move-background 20s linear infinite;
+}
+
+/*--------------------ANIMATION--------------------*/
+
+@-webkit-keyframes example {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(0.35, 0.35);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(0.85, 0.85);
+		opacity: 1;
+	}
+}
+
+@keyframes example {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(0.35, 0.35);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(0.85, 0.85);
+	}
+}
+
+/*--------------------MISC--------------------*/
+
+
+body {
+	overflow: hidden;
+	font-family: 'Karla';
+	margin: 0;
+}
+
+::selection {
+	background-color: #fff;
+}
+
+[id*=yfi] {
+	height: 0;
+	opacity: 0;
+}
+
+#login-box {
+	transition: all ease-in-out 0.3s;
+	font-family: 'Patrick Hand', cursive;
+	position: absolute;
+	z-index: 2;
+	height: 380px;
+	width: 380px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.4);
+	border: 4px solid rgba(255, 255, 255, 0.4);
+	border-radius: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-transform: scale(0.35, 0.35);
+	opacity: 0;
+	-webkit-animation-name: example;
+	-webkit-animation-duration: 4s;
+	animation-name: example;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+#login-box:hover {
+	transition: all ease-in-out 0.3s;
+	border: 4px solid rgba(255, 0, 0, 0.2);
+	border-radius: 100%;
+}
+
+#anti-logo {
+	background-image: url(https://i.postimg.cc/dt7MHhx9/md2019.png);
+	background-size: cover;
+	width: 240px;
+	height: 240px;
+	transition: all ease-in-out 0.3s;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#login-box:hover #anti-logo {    
+-webkit-transform: scale(0.85,0.85);  
+transition: all ease-in-out 0.3s;    
+}    
+
+#login-box #welcome {
+	font-size: x-large;
+	color: #fff;
+	text-align: center;
+	margin-top: -12px;
+	margin-bottom: 40px;
+}
+
+#login-box #content {
+	font-size: 14px;
+	color: #bbb;
+	text-align: center;
+	margin-top: -28px;
+	margin-bottom: 15px;
+	padding-left: 5px;
+	width: auto;
+}
+
+.Button {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+.Button {
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-webkit-appearance: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: auto;
+}
+
+.Button {
+	font-family: 'Patrick Hand', cursive;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: .21px;
+	margin-left: 6px;
+	margin-right: 6px;
+	vertical-align: top;
+	position: absolute;
+	font-size: 13px;
+	line-height: 34px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 36px;
+	width: 200px;
+}
+
+.Button:hover {
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+/*--------------------MUSIC--------------------*/
+
+#music {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: rgba(0, 0, 0, 0.5);
+	width: 31px;
+	height: 31px;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 3;
+	bottom: 24px;
+	left: 27px;
+}
+
+#music img {
+	opacity: 1;
+	width: 17px;
+	height: 14px;
+	margin: 7px;
+	z-index: 999;
+}
+
+#music img:hover {
+	opacity: 0.5;
+}
+
+/*--------------------ABOUT PAGE--------------------*/
+
+#aboutback {
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 20%);
+	width: 840px;
+	height: 410px;
+	position: absolute;
+	top: -5px;
+	left: -30px;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 8px;
+        border:2px solid rgba(255,255,255,0.2);
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#japanese img {
+	position: absolute;
+	opacity: 0.5;
+	top: 60px;
+	left: 0;
+	margin: auto;
+}
+
+#aboutpage {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: 'Karla'!important;
+        background:var(--inner-back);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -3;
+	opacity: 0;
+	transition: all ease-in-out 0.3s;
+}
+
+#aboutpage:target {
+	z-index: 3;
+	opacity: 1;
+} 
+
+#aboutbox {
+	border-radius: 4px;
+	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.7);
+	width: 280px;
+	height: 120px;
+	position: absolute;
+	z-index: 0;
+	top: 50px;
+	left: 500px;
+	right: 0;
+	bottom: 0px;
+	margin: auto;
+}
+
+.abouttext {
+	color: #fff;
+	font-size: 11px;
+	padding: 12px;
+	position: relative;
+	top: -10px;
+}
+
+.abouttext2 {
+	text-align: center;
+	color:var(--color);
+	font-size: 13px;
+	padding: 12px;
+	position: relative;
+	top: -24px;
+}
+
+#aboutnav {
+	position: absolute;
+	z-index: 5;
+	width: 320px;
+	height: 50px;
+	background: #000;
+	top: 300px;
+	left: 400px;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+#cl {
+	height: 56px;
+	text-align: center;
+	position: absolute;
+	z-index: 0;
+	top: 238px;
+	left: 496px;
+	right: 0px;
+	bottom: 0;
+	margin: auto;
+	width: 340px;
+}
+
+#cl a {
+	border-radius: 4px;
+	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+	width: 116px;
+	height: auto;
+	padding: 5px 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid transparent;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
+	display: inline-block;
+	transition: all ease-in-out 0.3s;
+}
+
+#cl a:hover {
+	transition: all ease-in-out 0.3s;
+	color:var(--color);
+	background-color: rgba(15, 15, 15, 0.9);
+}
+
+#menubar {
+	position: fixed;
+	left: -146px;
+	right: 281px;
+	bottom: 0;
+	top: -245px;
+	margin: auto;
+	height: 56px;
+	width: 430px;
+	text-align: center;
+	z-index: 3;
+}
+
+#menubar a {
+	border-radius: 4px;
+	box-shadow: 3px 3px rgba(255, 255, 255, 0.1);
+	width: 69px;
+	height: auto;
+	padding: 3px 7px;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid transparent;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
+	display: block;
+	transition: all ease-in-out 0.3s;
+font-size:13px;
+}
+
+.selected {
+	color:var(--color);
+	background-color: rgba(15, 15, 15, 0.9);
+}
+
+#menubar a:hover {
+	transition: all ease-in-out 0.3s;
+	color:var(--color);
+	background-color: rgba(15, 15, 15, 0.9);
+}
+
+.imagebox:before {
+	content: '';
+	width: 394px;
+	height: 221px;
+	mix-blend-mode: screen;
+	background: url('https://i.postimg.cc/BbS87svQ/static.gif');
+	position: absolute;
+	z-index: 1;
+	top: 15px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: all ease-in-out 0.3s;
+}
+
+.imagebox {
+	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.7);
+	width: 424px;
+	height: 284px;
+	position: relative;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 19px;
+	margin-left: 8px;
+	border: 0px solid red;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.musicbox {
+	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.7);
+	width: 424px;
+	height: 284px;
+	position: relative;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 19px;
+	margin-left: 8px;
+	border: 0px solid red;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.musicbox iframe {
+	width: 394px;
+	height: 224px;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: all ease-in-out 0.3s;
+}
+.quotebox {
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.7);
+	width: 394px;
+	height: 0px;
+	position: relative;
+	z-index: 1;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin-left: 15px;
+	transition: all ease-in-out 0.3s;
+}
+
+.quotebox:before {
+	content: '';
+	position: absolute;
+	width: 394px;
+	height: 221px;
+	opacity: 1;
+	z-index: 1;
+	transition: all ease-in-out 0.3s;
+}
+
+.quotebox:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+	width: 394px;
+	height: 221px;
+	position: relative;
+	z-index: 1;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin-left: 15px;
+	transition: all ease-in-out 0.3s;
+}
+
+.imagebox img {
+	width: 394px;
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: all ease-in-out 0.3s;
+}
+
+.imagebox img:before {
+	content: 'Ass';
+	background: #fff;
+	z-index: 3;
+	width: 394px;
+	height: 200px;
+	transition: all ease-in-out 0.3s;
+}
+
+.imagebox img:hover {
+	opacity: 0.6;
+	transition: all ease-in-out 0.3s;
+}
+
+.updated {
+	color: #fff;
+	position: absolute;
+	bottom: -10px;
+	left: 10px;
+	display:none;
+}
+
+.tags {
+	color: #999;
+	position: absolute;
+	bottom: -2px;
+	right: 10px;
+	font-style: italic;
+}
+
+.quote {
+	height: auto;
+	text-align: center;
+	color: #FFF;
+	position: relative;
+	top: 42%;
+	bottom: 0;
+	margin: 0 auto;
+	font-size: 14px;
+	width: 385px;
+}
+
+.quoted {
+	height: 20px;
+	width: 360px;
+	text-align: center;
+	color:var(--color);
+	position: relative;
+	top: 42%;
+	margin: auto;
+}
+
+#popup {
+	width: 310px;
+	height: 103px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 1;
+	z-index: 3;
+	border: 0px solid red;
+	border-top-left-radius: 10px;
+}
+
+#popup:before {
+	content: '';
+	width: 310px;
+	height: 33px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 1;
+	z-index: 0;
+	border: 0px solid red;
+	border-top-left-radius: 10px;
+}
+
+#popup h1 {
+	font-family: 'Karla';
+	position: relative;
+	top: 0px;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+}
+
+#popup2:before {
+	content: '';
+	width: 310px;
+	height: 33px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 1;
+	z-index: 0;
+	border: 0px solid red;
+	border-top-left-radius: 10px;
+}
+
+#popup2 {
+	font-family: 'Karla';
+	width: 310px;
+	height: 103px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	border: 0px solid red;
+	border-top-left-radius: 10px;
+}
+
+#popup2:target {
+	position: absolute;
+	z-index: 2;
+	opacity: 1;
+}
+
+#popup2 h1 {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: 'Karla';
+	position: relative;
+	top: 0px;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+}
+
+.ava {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	left: 15px;
+	top: 40px;
+	height: 55px;
+	width: 55px;
+	border-radius: 100%;
+}
+
+.rname {
+	color: #fff;
+	position: absolute;
+	left: 85px;
+	bottom: 22px;
+}
+
+.addme {
+	color: #fff;
+	position: absolute;
+	left: 84px;
+	bottom: 9px;
+	font-size: 13px;
+}
+
+.puname {
+	color: #ccc;
+	position: absolute;
+	left: 85px;
+	bottom: 2px;
+}
+
+#add {
+	width: 70px;
+	height: 35px;
+	background: #9e0b0f;
+	-webkit-border-radius: 4;
+	-moz-border-radius: 4;
+	position: absolute;
+	top: 50px;
+	right: 15px;
+	background: #d93434;
+	background-image: -webkit-linear-gradient(top, #949fc5, #6f3333);
+	background-image: -moz-linear-gradient(top, #949fc5, #6f3333);
+	background-image: -ms-linear-gradient(top, #949fc5, #6f3333);
+	background-image: -o-linear-gradient(top, #949fc5, #6f3333);
+	background-image: linear-gradient(to bottom, #949fc5, #6f3333);
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+#add p {
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	top: -21px;
+	font-size: 24px;
+}
+
+.hitbox {
+	width: 70px;
+	height: 35px;
+	background: #fff;
+	border-radius: 7%;
+	position: absolute;
+	z-index: 999;
+	top: 50px;
+	right: 15px;
+	opacity: 0;
+}
+
+.hitbox:hover {
+	opacity: 0.2;
+}
+
+.addid {
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}
+
+#animewrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#animewrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#animewrap:target {
+	display: block;
+	z-index: 3;
+}
+
+#moviewrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#moviewrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#moviewrap:target {
+	display: block;
+	z-index: 3;
+}
+
+#showwrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#showwrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#showwrap:target {
+	display: block;
+	z-index: 3;
+}
+
+#gamewrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#gamewrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#gamewrap:target {
+	display: block;
+	z-index: 3;
+}
+
+#musicwrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#musicwrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#musicwrap:target {
+	display: block;
+	z-index: 3;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: #000;
+}
+
+*::-webkit-scrollbar {
+	width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color:#333;
+}
+
+#commentwrap {
+	position: absolute;
+	left: 0;
+	right: 260px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 395px;
+	overflow: auto;
+	display: none;
+}
+
+#sprite img {
+	opacity: 0.7;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	transition: all ease-in-out 0.3s;
+}
+
+#sprite img:hover {
+	opacity: 1;
+	transition: all ease-in-out 0.3s;
+}
+
+body {
+	min-height: 100vh;
+	color: #57585c;
+	color: var(--color-text);
+	background-color: #fff;
+	background-color: var(--color-bg);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #555;
+	--color-link-hover: #98fadf;
+	--color-info: #f7cfb9;
+	--glitch-width: 100vw;
+	--glitch-height: 100vh;
+	--gap-horizontal: 10px;
+	--gap-vertical: 5px;
+	--time-anim: 9s;
+	--delay-anim: 2s;
+	--blend-mode-1: none;
+	--blend-mode-2: overlay;
+	--blend-mode-3: none;
+	--blend-mode-4: none;
+	--blend-mode-5: overlay;
+	--blend-color-1: transparent;
+	--blend-color-2: #7d948e;
+	--blend-color-3: transparent;
+	--blend-color-4: transparent;
+	--blend-color-5: #af4949;
+}
+
+/* Glitch styles */
+
+.glitch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--glitch-width);
+	height: var(--glitch-height);
+	overflow: hidden;
+}
+
+.glitchit {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	background-blend-mode: var(--blend-mode-1);
+        background-image:var(--outer-back);
+}
+
+.glitchit:nth-child(n+2) {
+	opacity: 0;
+}
+
+.imgloaded .glitchit:nth-child(n+2) {
+	animation-duration: var(--time-anim);
+	animation-delay: var(--delay-anim);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.imgloaded .glitchit:nth-child(2) {
+	background-color: var(--blend-color-2);
+	background-blend-mode: var(--blend-mode-2);
+	animation-name: glitch-1;
+}
+
+.imgloaded .glitchit:nth-child(3) {
+	background-color: var(--blend-color-3);
+	background-blend-mode: var(--blend-mode-3);
+	animation-name: glitch-2;
+}
+
+.imgloaded .glitchit:nth-child(4) {
+	background-color: var(--blend-color-4);
+	background-blend-mode: var(--blend-mode-4);
+	animation-name: glitch-3;
+}
+
+.imgloaded .glitchit:nth-child(5) {
+	background-color: var(--blend-color-5);
+	background-blend-mode: var(--blend-mode-5);
+	animation-name: glitch-flash;
+}
+
+
+/* Animations */
+
+@keyframes glitch-1 {
+	0% {
+		opacity: 1;
+		transform: translate3d(var(--gap-horizontal), 0, 0);
+		-webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+		clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+	}
+	2% {
+		-webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+		clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+	}
+	4% {
+		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+		clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+	}
+	6% {
+		-webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+		clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+	}
+	8% {
+		-webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+	}
+	10% {
+		-webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+	}
+	12% {
+		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+	}
+	14% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+	}
+	16% {
+		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+	}
+	18% {
+		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+	}
+	20% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+	}
+	21.9% {
+		opacity: 1;
+		transform: translate3d(var(--gap-horizontal), 0, 0);
+	}
+	22%,
+	100% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+		-webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+		clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	}
+}
+
+@keyframes glitch-2 {
+	0% {
+		opacity: 1;
+		transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+		-webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
+		clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
+	}
+	3% {
+		-webkit-clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+		clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+	}
+	5% {
+		-webkit-clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+		clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+	}
+	7% {
+		-webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+		clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+	}
+	9% {
+		-webkit-clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+		clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+	}
+	11% {
+		-webkit-clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
+		clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
+	}
+	13% {
+		-webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+		clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+	}
+	15% {
+		-webkit-clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
+		clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
+	}
+	17% {
+		-webkit-clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
+		clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
+	}
+	19% {
+		-webkit-clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
+		clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
+	}
+	20% {
+		-webkit-clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
+		clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
+	}
+	21.9% {
+		opacity: 1;
+		transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+	}
+	22%,
+	100% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+		-webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+		clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	}
+}
+
+@keyframes glitch-3 {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+		-webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+		clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+	}
+	1.5% {
+		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+		clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+	}
+	2% {
+		-webkit-clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+		clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+	}
+	2.5% {
+		-webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+		clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+	}
+	3% {
+		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+		clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+	}
+	5% {
+		-webkit-clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+		clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+	}
+	5.5% {
+		-webkit-clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+		clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+	}
+	7% {
+		-webkit-clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+		clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+	}
+	8% {
+		-webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+		clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+	}
+	9% {
+		-webkit-clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+		clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+	}
+	10.5% {
+		-webkit-clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+		clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+	}
+	11% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+	}
+	13% {
+		-webkit-clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+		clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+	}
+	14% {
+		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+		clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+	}
+	14.5% {
+		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+		clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+	}
+	15% {
+		-webkit-clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+		clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+	}
+	16% {
+		-webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+		clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+	}
+	18% {
+		-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+		clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+	}
+	20% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+	}
+	21.9% {
+		opacity: 1;
+		transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+	}
+	22%,
+	100% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+		-webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+		clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	}
+}
+
+@keyframes glitch-text {
+	0% {
+		transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+		-webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+		clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+	}
+	2% {
+		-webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+	}
+	4% {
+		-webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+	}
+	5% {
+		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+	}
+	6% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+	}
+	7% {
+		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+	}
+	8% {
+		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+	}
+	9% {
+		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+	}
+	9.9% {
+		transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
+	}
+	10%,
+	100% {
+		transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+}
+
+
+/* Flash */
+
+@keyframes glitch-flash {
+	0%,
+	5% {
+		opacity: 0.2;
+		transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
+	}
+	5.5%,
+	100% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+#youtube{
+position:absolute;
+opacity:0;
+z-index:-99;
+}
+#profilepop{
+font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+position: absolute;
+z-index: 0;
+top:0;
+left:500!important;
+right:0;
+bottom:0;
+margin:auto;
+border-radius:5px;
+border:2px solid rgba(255,255,255,0.2);
+color:#fff;
+font-size:14px;
+width:250px;
+height:316px;
+background: rgba(0, 0, 0, 0.7);
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 20%);
+}
+#profilepop::before{
+content:'';
+color:#fff;
+font-size:14px;
+width:250px;
+height:105px;
+position:absolute;
+top:211px;
+background:rgba(25,25,25,0.6);
+border-radius:5px;
+}
+#profilepop h1{
+position:relative;
+top:-3px;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+}
+.stat{
+position:relative;
+top:-5px;
+text-align:center;
+margin-left:9px;
+margin-right:9px;
+height:54px;
+}
+#text{
+position:absolute;
+top:20px;
+text-align:center;
+margin-left:9px;
+margin-right:9px;
+height:54px;
+width:228px;
+font-size:13px;
+}
+#game{
+position:absolute;
+top:0px;
+width:62px;
+height:62px;
+margin-left:10px;
+}
+#game img{
+width:60px;
+height:60px;
+border-radius:5px;
+}
+#gamecontent{
+float:right;
+margin-right:6px;
+width:162px;
+}
+#gamecontent p{
+margin:0;
+font-size:12px;
+}
+#gamecontent a{
+text-decoration:none;
+color:#aaa;
+}
+#profcontent{
+position:relative;
+top:113px;
+}
+#avi{
+transition: all ease-in-out 0.3s; 
+width:100px;
+height:100px;
+position:absolute;
+margin:auto;
+bottom:100px;
+left:0;
+right:0;
+border-radius:100%;
+background:var(--avatar)no-repeat center/cover;
+}
+#avi:hover{
+transition: all ease-in-out 0.3s;    
+-webkit-filter: grayscale(100%);    
+filter: grayscale(100%);   
+}
+#gaming{
+position:relative;
+top:10px;
+}
+#myframe{
+display:none;
+}
+</style>
+
+<script type="text/javascript">
+
+function showAbout() {
+  document.getElementById("animewrap").style.display = "block";
+  document.getElementById("aboutpage").style.zIndex = "3";
+  document.getElementById("aboutpage").style.opacity = "1";
+}
+function showAnime() {
+  document.getElementById("animewrap").style.display = "block";
+  document.getElementById("moviewrap").style.display = "none";
+  document.getElementById("showwrap").style.display = "none";
+  document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
+}
+function showMovies() {
+  document.getElementById("animewrap").style.display = "none";
+  document.getElementById("moviewrap").style.display = "block";
+  document.getElementById("showwrap").style.display = "none";
+  document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
+}
+function showShows() {
+  document.getElementById("animewrap").style.display = "none";
+  document.getElementById("moviewrap").style.display = "none";
+  document.getElementById("showwrap").style.display = "block";
+  document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
+}
+function showGames() {
+  document.getElementById("animewrap").style.display = "none";
+  document.getElementById("moviewrap").style.display = "none";
+  document.getElementById("showwrap").style.display = "none";
+  document.getElementById("gamewrap").style.display = "block";
+  document.getElementById("musicwrap").style.display = "none";
+}
+function showMusic() {
+  document.getElementById("animewrap").style.display = "none";
+  document.getElementById("moviewrap").style.display = "none";
+  document.getElementById("showwrap").style.display = "none";
+  document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "block";
+}
+
+</script>
+
+<div id="loader">
+    </div>
+
+    <div class="content">
+        <div class="glitch">
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+        </div>
+
+    <script>
+        var loader = document.getElementById('loader');
+        window.addEventListener("load", function(event) {
+            loader.classList.remove('loading');
+            loader.classList.add('loaded');
+            document.body.classList.add('imgloaded');
+        });
+
+    </script>
+<a href="#">
+<div id="login-container">
+<div id="login-box" onclick="showAbout()">
+<div id="anti-logo"></div>
+</div></div>
+</a>
+
+<div id="fakescreen">
+</div>
+ 
+<div id="aboutpage">
+
+<div id="sprite">
+<img src="https://i.postimg.cc/prjbcDps/lucifer.gif"/>
+</div>
+
+<div id="japanese">
+<img src="https://i.postimg.cc/KzNrxv0P/light.png"/>
+</div>
+
+<div id="aboutback">
+</div>
+
+<iframe id="myFrame" src="/default.asp"></iframe>
+
+<script>
+document.getElementById("myFrame").addEventListener("load", myFunction);
+
+function myFunction() {
+  var a = Math.random() + ""
+var rand1 = a.charAt(5)
+quotes = new Array
+quotes[1] = "If darkness doesn't consume you, then you control it. If the light doesn't blind you, then you absorb it."
+quotes[2] = "We are all in the gutter, but some of us are looking at the stars."
+quotes[3] = "If you expect the worst, you'll never be disappointed."
+quotes[4] = "When things are at their blackest, I say to myself, 'Cheer up, things could be worse.' And sure enough, they get worse."
+quotes[5] = "Keep a light, hopeful heart. But ­expect the worst."
+quotes[6] = "I will be the first to admit that I am a pessimist by nature. It is, after all, the wisest way to be."
+quotes[7] = "There are moments when everything goes well; don't be frightened, it won't last."
+quotes[8] = "I thought what I'd do was, I'd pretend I was one of those deaf-mutes."
+quotes[9] = "I will love the light for it shows me the way, yet I will endure the darkness for it shows me the stars."
+quotes[0] = "When you spend so long trapped in darkness, you find that the darkness begins to stare back."
+var quote = quotes[rand1]
+var para = document.createElement("P");
+para.innerHTML = "This is a paragraph.";
+document.getElementById("text").append(quote);
+}
+</script>
+
+<div id="profilepop">
+<div id="profcontent">
+<div id="avi"></div>
+<div id="screen">
+</div>
+<h1>cait.exe<span style="font-weight:600;color:#AAA;"></h1>
+<div id="text"></div>
+<p class="stat"></p>
+<div id="gaming">
+<div id="game"></div>
+<div id="gamecontent">
+<p><span style="font-weight:600;color:#AAA;">Mike (6666)</p></span><p>• Message me if needed!</span></p><p>
+• <a href="https://xat.com/Mike">http://xat.com/Mike</p></a>
+<p>
+• <a href="https://discord.gg/HECGKh47Gr">discord.gg/HECGKh47Gr</p></a>
+</div>
+</div></div></div>
+
+<script>
+
+var images = ['https://i.postimg.cc/yx55c5pt/aliceangel.png', 'https://i.postimg.cc/wjDPRwX4/chiaki.png', 'https://i.postimg.cc/bv85x1Ly/kazemori.png', 'https://i.postimg.cc/5NhTthCF/mei.png', 'https://i.postimg.cc/DyJRnv8T/rei.png', 'https://i.postimg.cc/VsH2xrsg/sayaka.png','https://i.postimg.cc/0NNJ62Ft/bulma.png','https://i.postimg.cc/1tnnH79w/eruka.png','https://i.postimg.cc/1zYVD1Zy/fuu.png','https://i.postimg.cc/3RsybjR6/mina.png','https://i.postimg.cc/Zn69k9vq/rachel.png','https://i.postimg.cc/mZ911npG/reiko.png'];
+
+$('<img src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#game');
+
+</script>
+
+<div id="menubar">
+<a href="#" onclick="showAnime()">Anime</a>
+<a href="#" onclick="showMovies()">Movies</a>
+<a href="#" onclick="showShows()">Shows</a>
+<a href="#" onclick="showGames()">Games</a>
+<a href="#" onclick="showMusic()">Music</a>
+</div>
+
+<div id="mainwrap">
+
+<div id="animewrap">
+
+<div class="imagebox">
+<img src="https://xatimg.com/image/yTvzEcmfjTiO.gif" />
+<p class="tags">#LePortraitdePetitCossette #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">" I believe I'm entering the realm of insanity, but I'm fine with that."</p>
+<p class="quoted">Eiri, Le Portrait de Petit Cossette</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/9M9MHGJS/patemabanner.gif" />
+<p class="tags">#PatemaInverted #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"I get it! Patema, your weight is pulling me up!"</p>
+<p class="quoted">- Age, Patema Inverted</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/dtPC30Cr/ahmygoddessbanner.gif" />
+<p class="tags">#AhMyGoddess #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"Even if the whole universe comes between us, even if you lost every single memory, I'll still find you and we'll start again and again even if it takes a lot of time."</p>
+<p class="quoted">- Keichii, Ah My Goddess</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/Y02CG4Lj/alettertomomobanner.gif" />
+<p class="tags">#ALetterToMomo #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"You're selfish, and you're a liar. I don't care if you come back."</p>
+<p class="quoted">- Momo Miyaura, A Letter to Momo</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/dtv86nrT/parasytebanner.gif" />
+<p class="tags">#ParasyteTheMaxim #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"I have also done much research on humans. What are parasites for humans and what are humans to us? My conclusion is this: we are two halves of the same whole."</p>
+<p class="quoted">- Reiko Tamura, Parasyte The Maxim</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/Df4JBthX/shigofumibanner.gif" />
+<p class="tags">#Shigofumi #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"Whether people live or die doesn't matter to me. People eventually die. The only difference is when. If there is some meaning...it's in the way you die."</p>
+<p class="quoted">- Fumika, Shigofumi</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/8z5vGsW7/fireworksbanner.gif" />
+<p class="tags">#FireworksShouldweseeitfromthesideorbottom #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">December 23rd, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"The ocean is everything I want to be. Beautiful. Mysterious. Wild and free."</p>
+<p class="quoted">- Nazuna, Fireworks, Should we see it from the side or bottom?</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/zfK6x2VF/casshernsinsbanner.gif" />
+<p class="tags">#CasshernSins #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">December 23rd, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"What people seek when the depths of despair and death are upon them, may be the silhouettes of the ones they love."</p>
+<p class="quoted">- Casshern, Casshern Sins</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/0Nh5wBhG/ghostintheshellbanner.gif" />
+<p class="tags">#GhostintheShell #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">December 23rd, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Just like wine, some human relationships need time to mature."</p>
+<p class="quoted">- Daisuke Aramaki, Ghost in the Shell: Stand Alone Complex</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/4yST5k2z/blamebanner.gif" />
+<p class="tags">#Blame! #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">November 25th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I'm Killy."</p>
+<p class="quoted">- Killy, Blame!</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/8PHHq5zk/empireofcorpsesbanner.gif" />
+<p class="tags">#TheEmpireOfCorpses #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">November 23rd, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"That's why I... am a bad copy."</p>
+<p class="quoted">- Hadaly Lilith, The Empire Of Corpses</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/QMpPJh24/kingofthornbanner.png" />
+<p class="tags">#KingOfThorn #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Perhaps all of us are only a dream of somebody."</p>
+<p class="quoted">- Marco, King of Thorn</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/vDFfhwFh/ungobanner.gif" />
+<p class="tags">#UnGo #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Everyone has desires they can't tell anyone about."</p>
+<p class="quoted">- Shinjūrō Yuki, Un-Go</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/rsMnQrdr/paprikabanner.gif" />
+<p class="tags">#Paprika #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 17th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Desperate times call for desperate measures.
+"</p>
+<p class="quoted">- Atsuko Chiba, Paprika</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/zGGvHzjD/anotherbanner.gif" />
+<p class="tags">#Another #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 17th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"No matter how many relationships we seem to have, we’re all alone.
+"</p>
+<p class="quoted">- Mei Misaki, Another</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/zf4FPRQf/perfectbluebanner.gif" />
+<p class="tags">#PerfectBlue #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 17th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"What? This isn’t true. I didn’t write this."</p>
+<p class="quoted">- Mima Kirigoe, Perfect Blue</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3rXfM9kj/angelsofdeathbanner.gif" />
+<p class="tags">#AngelsOfDeath #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 7th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Don't let me kill you just yet."</p>
+<p class="quoted">- Isaac Foster, Angels of Death</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/pVjbmDpy/thegirlwholeaptthroughtimebanner.gif" />
+<p class="tags">#TheGirlWhoLeaptThroughTime #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 7th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Time waits for no one."</p>
+<p class="quoted">- Chiaki Mamiya, The Girl Who Leapt Through Time</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/HLSHtdgx/rezerobanner.gif" />
+<p class="tags">#ReZero #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 7th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"No matter what happens, even when it looks like you’re gonna lose, when no one else believes in you, when you don’t believe in your self, I will believe!"</p>
+<p class="quoted">- Rem, Re:Zero</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/d1TgqzFk/yournamebanner.gif" />
+<p class="tags">#YourName #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 16th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"There’s no way we could meet. But one thing is certain. If we see each other, we’ll know. That you were the one who was inside me. That I was the one who was inside you."</p>
+<p class="quoted">- Mitsuha Miyamizu, Your Name</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/GpMc2hqg/coderealizebanner.gif" />
+<p class="tags">#CodeRealize #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Why should I be sad? It's a part of me."</p>
+<p class="quoted">- Cardia Beckford, Code: Realize</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/BvG8Fkxc/childrenbanner.png" />
+<p class="tags">#ChildrenWhoChaseLostVoices #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 4th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"It makes you realize just how solitary human existence is."</p>
+<p class="quoted">- Ryuji Morisaki, Children Who Chase Lost Voices</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/ZKhh4HHy/colorfulbanner.gif" />
+<p class="tags">#Colorful #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 4th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Don't forget that many people support you, and that you provide support for others."</p>
+<p class="quoted">- Pura Pura, Colorful</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/7Z7x5hWQ/alitagunmbanner.gif" />
+<p class="tags">#GunnmBattleAngelAlita #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"No past means a clean slate for your soul, no memories to haunt you."</p>
+<p class="quoted">- Yugo, Gunnm: Battle Angel Alita (OVA)</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/Y0xtVmsJ/renabanner.gif" />
+<p class="tags">#HigurashiNoNakuKoroNi #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 25th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Everyone's days of happiness are limited."</p>
+<p class="quoted">- Rena Ryugu, Higurashi No Naku Koro Ni</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/8cFMhPzV/uminekobanner.gif" />
+<p class="tags">#UminekoNoNakuKoroNi #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 20th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"A 'Devil's Proof' is a form of underhanded sophistry formed by claiming that it is impossible to prove a negative fact."</p>
+<p class="quoted">- Virgilia, Umineko No Naku Koro Ni</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/C1kgzc0L/relifebanner.gif" />
+<p class="tags">#ReLife #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 11th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"If someone always follows the perfect path without ever facing hardship... is it really what's best for that person?"</p>
+<p class="quoted">- Yoake Ryou, ReLife</p>
+
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/SNqsrmvB/girlbanner.gif" />
+<p class="tags">#Synthwave #AnimeStyleLofi</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 26th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You don't always get what you want in life, but you will always get what you need."</p>
+<p class="quoted">- Someone, Somewhere</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/GmTHx042/orangebanner.gif" />
+<p class="tags">#Orange #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Maybe it's impossible to live life without any regrets. Even when you know the future... you'll still mess up."</p>
+<p class="quoted">- Ichigo Takano, Orange</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/MTNLRjNX/erasedbanner.gif" />
+<p class="tags">#Erased #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"To get what you want, you put up with something, make an effort, learn a skill, and inspire yourself."</p>
+<p class="quoted">- Satoru Fujinuma, Erased</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/qMQ7xyBw/yakubanner.gif" />
+<p class="tags">#YakumoPsychicDetective #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 31st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Every human has another personality that they keep hidden from others."</p>
+<p class="quoted">- Yakumo Saitō, Yakumo Psychic Detective</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/DyhgXkms/ghosthuntbanner.gif" />
+<p class="tags">#GhostHunt #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 31st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I'm tired of trying, sick of crying, I know I've been smiling, but inside I'm dying."</p>
+<p class="quoted">- Mai Taniyama, Yakumo Psychic Detective</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/T2HmZt10/codegeassbanner.gif" />
+<p class="tags">#CodeGeass #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"In this world, evil can arise from the best of intentions. And there is good which can come from evil intentions."</p>
+<p class="quoted">- C.C., Code Geass</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/jjKJz93x/deathnotebanner.gif" />
+<p class="tags">#DeathNote #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Kira is childish and he hates losing... I am also childish and I hate to lose. That's how I know."</p>
+<p class="quoted">- L Lawliet, Death Note</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/tT6mMVC9/gokublackbanner.gif" />
+<p class="tags">#DragonBallSuper #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I look down on existence from a much higher perspective than you do. I witness this world, this universe and the truth of all things."</p>
+<p class="quoted">- Goku Black, Dragon Ball Z</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/ncGNx7Kz/dragonballzbanner.gif" />
+<p class="tags">#DragonBallZ #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I do not fear this new challenge. Rather like a true warrior I will rise to meet it."</p>
+<p class="quoted">- Vegeta, Dragon Ball Z</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/NGmj1Jtz/darkerthanblackbanner.gif" />
+<p class="tags">#DarkerThanBlack #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You can make the choice to blacken your lungs, but don’t expect to enforce that on me."</p>
+<p class="quoted">- November 11, Darker Than Black</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/28Xh1jDD/yuyuhakushobanner.gif" />
+<p class="tags">#YuYuHakusho #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I'll help you... But not by death, this world has enough of that. You can keep your life as long as you change the way you live it. It's never too late, believe me."</p>
+<p class="quoted">- Kurama, Yu Yu Hakusho</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3w63F0nK/fullmetalbanner.gif" />
+<p class="tags">#FullMetalAlchemist #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"People can say there is a balance, a logic that everything happens for a reason... But the truth is far less designed. No matter how hard you work, when you die, you die."</p>
+<p class="quoted">- Dante, Full Metal Alchemist</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/qBn4TRMF/fullmetalbrotherhoodbanner.gif" />
+<p class="tags">#FullMetalAlchemistBrotherhood #Anime</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Human kind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost."</p>
+<p class="quoted">- Edward Elric, Full Metal Alchemist Brotherhood</p>
+</div></div>
+
+</div>
+
+<div id="moviewrap">
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/s2hyM37G/therescuersdownunderbanner.gif" />
+<p class="tags">#TheRescuersDownUnder #Anime</p>
+
+
+<div class="quotebox">
+<p class="quote">"Miss Bianca, before anything else happens...Will You Mary Me?"</p>
+<p class="quoted">- Bernard, The Rescuers Down Under</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/6pcftDyQ/starwarsbanner.gif" />
+<p class="tags">#StarWarsTheRiseofSkywalker #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">December 23rd, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"My mother was the daughter of Vader. Your father was the son of the Emperor. What Palpatine doesn’t know is we’re a didact in the Force way."</p>
+<p class="quoted">- Kylo Ren, Star Wars: The Rise of Skywalker</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/0QyTkh4V/jokerbanner.gif" />
+<p class="tags">#Joker #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">October 30th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I used to think that my life was a tragedy, but now I realize, it's a comedy."</p>
+<p class="quoted">- Arthur Fleck, Joker</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/xdXtH0D1/madmaxbanner.gif" />
+<p class="tags">#MaxMaxFuryRoad #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 27th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"My name is Max. My world is fire. And blood. Once, I was a cop; a road warrior searching for a righteous cause."</p>
+<p class="quoted">- Max Rockatansky, Mad Max, Fury Road</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/6qXrF6Zc/doratheexplorerbanner.png" />
+<p class="tags">#DoraandtheLostCityofGold #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 17th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You're not a kid. But you're not a grownup either, Dora. You're a teenager. It's a super confusing time. But the fact is you're right. You can't do it by yourself. Good news is you have friends now, and together anything is possible."</p>
+<p class="quoted">- Boots, Dora and the Lost City of Gold (2019)</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3RLVhLTk/readyornotbanner.png" />
+<p class="tags">#ReadyOrNot #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 14th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Hide & Seek? Are we really going to play that?"</p>
+<p class="quoted">- Grace, Ready Or Not</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/FRP6hwp0/itbanner.gif" />
+<p class="tags">#It2017 #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I bet I can cheer him up! I'll give him a balloon. Do you want a balloon too, Georgie?"</p>
+<p class="quoted">- Pennywise, It (2017)</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/nrBdQw4R/thelionkingbanner.gif" />
+<p class="tags">#TheLionKing2019 #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"While others look for what he can take, a true king gives back."</p>
+<p class="quoted">- Mufasa, The Lion King (2019)</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/JhSqKmp6/bigeyesbanner.gif" />
+<p class="tags">#BigEyes #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"This is what it’s come to, huh? You are the only living soul I can tell my secret to. I painted every single one of them, every Big Eye, me, and no one will ever know but you."</p>
+<p class="quoted">- Margaret Keane, Big Eyes</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/SQwSdk4b/sonicovabanner.gif" />
+<p class="tags">#SonicTheHedgehogTheMovie #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 9th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You might know everything I'm going to do, but that's not going to help you since I know everything you're going to do! Strange, isn't it!"</p>
+<p class="quoted">- Sonic, Sonic The Hedgehog: The Movie</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/W3KQMQZT/therescuersbanner.gif" />
+<p class="tags">#TheRescuers #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Well, after all, waking him up in the middle of the night. Wouldn't you be grumpy, too?"</p>
+<p class="quoted">- Miss Bianca, The Rescuers</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/X7CMYCtT/gumbybanner.gif" />
+<p class="tags">#TheGumbyMovie #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 9th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Don't get in the truck! That's not Gumby, it's a robot! It'll lock you in there the way Gumby was kidnapped! Run!"</p>
+<p class="quoted">- Tara, The Gumby Movie</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/ZnRS6LVc/childsplay2019banner.png" />
+<p class="tags">#ChildsPlay2019 #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I was broken, Andy. I couldn't make you smile. But I'm better now. I know how to make you happy now. Maybe you don't want to be happy. Maybe you're broken, too. "</p>
+<p class="quoted">- Chucky, Child's Play (2019)</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/wvDtS9pP/annabellebanner.gif" />
+<p class="tags">#AnnabelleComesHome #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You found out the hard way that there is a lot of evil in this room. But you know what I actually like about it? All the evil in here reminds me of all the good that’s out there."</p>
+<p class="quoted">- Lorraine Warren, Annabelle Comes Home</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/cHhxTndD/mabanner.gif" />
+<p class="tags">#Ma #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 9th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Okay, oh, and nobody go upstairs. That’s my world, and right now it’s a mess. So, uh, you guys are free to do whatever you want to do down here, but, you know."</p>
+<p class="quoted">- Sue Anne "Ma", Ma</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/MZjtpB62/insidiousbanner.gif" />
+<p class="tags">#Insidious #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Last night I watch myself sleep then I flew away."</p>
+<p class="quoted">- Dalton Lambert, Insidious</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/vBD8HhF5/happydeathdaybanner.png" />
+<p class="tags">#HappyDeathDay #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I can't change what I've done, but I can start trying to be a better person today."</p>
+<p class="quoted">- Tree Gelbman, Happy Death Day</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/6qY81qXh/detectivepikachubanner.gif" />
+<p class="tags">#DetectivePikachu #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 8th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"There's magic that brought us together. And that magic... is hope."</p>
+<p class="quoted">- Pikachu, Detective Pikachu</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/FKgFc13n/donniedarkobanner.png" />
+<p class="tags">#DonnieDarko #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I just hope, that when the world comes to an end, I can breathe a sigh of relief...because there will be so much to look forward to."</p>
+<p class="quoted">- Donnie Darko, Donnie Darko</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/8cfg91G7/beetlejuicebanner.gif" />
+<p class="tags">#Beetlejuice #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 12th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You have got to take the upper hand in all situations or people, whether they're dead or alive, will walk all over you."</p>
+<p class="quoted">- Delia Deetz, Beetlejuice</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/W3LWRbyj/corpsebridebanner.gif" />
+<p class="tags">#CorpseBride #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I spent so long in the darkness....I'd almost forgotten how beautiful the moonlight is!"</p>
+<p class="quoted">- Emily, Corpse Bride</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/nzFm9yjB/nightmarebanner.gif" />
+<p class="tags">#TheNightmareBeforeChristmas #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I sense there’s something in the wind, that feels like tragedy’s at hand."</p>
+<p class="quoted">- Sally, The Nightmare Before Christmas</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/rpqzvLC3/poltergeistbanner.gif" />
+<p class="tags">#Poltergeist #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Now clear your minds. It knows what scares you. It has from the very beginning. Don't give it any help, it knows too much already."</p>
+<p class="quoted">- Tanjina Barrons, Poltergeist</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/7Z5yhtPh/childsplaybanner.gif" />
+<p class="tags">#ChildsPlay #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"You hear this, you son of a bitch! I'm gonna get you for this! I'm gonna get you and I'm gonna get Eddie...no matter what!"</p>
+<p class="quoted">- Charles Lee Ray, Child's Play</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/XYscHx9f/anightmareonelmstreetbanner.gif" />
+<p class="tags">#ANightmareOnElmStreet #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I take back every bit of energy I ever gave you. You're nothing. You're shit."</p>
+<p class="quoted">- Nancy, A Nightmare On Elm Street</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3N3kHQTd/orphanbanner.gif" />
+<p class="tags">#Orphan #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"I had to kill her, because she was going to tell on me. You're not going to tell on me... are you?"</p>
+<p class="quoted">- Esther Coleman, Orphan</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/qBhxv8yw/edwardscissorhandsbanner.gif" />
+<p class="tags">#EdwardScissorhands #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"People are afraid of me because I am different."</p>
+<p class="quoted">- Edward, Edward Scissorhands</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/525j5PM3/monkeybonebanner.gif" />
+<p class="tags">#Monkeybone #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Excuse me kitty. I'll be right back after I choke my monkey!"</p>
+<p class="quoted">- Stu Miley, Monkeybone</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3N41MGCL/marsattacksbanner.gif" />
+<p class="tags">#MarsAttacks! #Movie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 1st, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Why can’t we work out our differences? Why can’t we work things out? Little people, why can’t we all just get along?"</p>
+<p class="quoted">- President Dale, Mars Attacks!</p>
+</div></div>
+
+</div>
+
+<div id="showwrap">
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/QxT31Hrk/thementalistbanner.gif" />
+<p class="tags">#TheMentalist #Show</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Nothing's working. Nothing. It's just a game, and he keeps winning. The only way for me to stop him is if I stop playing."</p>
+<p class="quoted">- Patrick Jane, The Mentalist</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/T2myY2HF/dexterbanner.gif" />
+<p class="tags">#Dexter #Show</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"They make it look easy, connecting with another human being. It's like no one told them it's the hardest thing in the world."</p>
+<p class="quoted">- Dexter Morgan, Dexter</p>
+</div></div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/SxKN8mDy/eurekabanner.gif" />
+<p class="tags">#Eureka #Show</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Good job, Carter... Wow, that didn't even leave a bad taste in my mouth."</p>
+<p class="quoted">- Nathan Stark, Eureka</p>
+</div></div>
+
+</div>
+
+<div id="gamewrap">
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/GpD6HGHB/sonicadventurebanner.gif" />
+<p class="tags">#SonicAdventure #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/mDNqS43B/sonicadventure2banner.gif" />
+<p class="tags">#SonicAdventure2 #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/pLkktF24/dkc2banner.png" />
+<p class="tags">#DonkeyKongCountry2 #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/Jnby6DgS/rayman2banner.gif" />
+<p class="tags">#Rayman2TheGreatEscape #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/9fmT6MWS/bombermanherobanner.gif" />
+<p class="tags">#BombermanHero #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3RwXvwVp/papermariottyd.gif" />
+<p class="tags">#PaperMarioTTYD #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/4yBj1nxg/papermariobanner.gif" />
+<p class="tags">#PaperMario #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/pdK12v6z/nightsintodreamsbanner.gif" />
+<p class="tags">#NightsIntoDreams #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/bJN0Kjcz/lifeisstrange.gif" />
+<p class="tags">#LifeIsStrange #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/HxgWxpsg/ocarinaoftimebanner.gif" />
+<p class="tags">#OcarinaOfTime #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/NjXwrWnf/majorasmaskbanner.gif" />
+<p class="tags">#MajorasMask #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/XNr1J9mn/starfox64banner.gif" />
+<p class="tags">#StarFox64 #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/tgDWdm18/blazbluebanner.gif" />
+<p class="tags">#BlazBlue #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div></div>
+
+<div id="musicwrap">
+
+<div class="musicbox">
+<iframe width="424" height="284" src="https://www.youtube.com/embed/videoseries?list=PLvIPkK99cOShLWWJKfqS4OeJzQWYsfmbW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+</div></div>
+
+</div></div>
+<div id="music">
+<a href="https://www.youtube.com/watch?v=WwTSQNEkwok" target="_blank"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
+</a>
+</div>
+
+<div class="background-container">
+<div class="twinkling"></div>
+<div class="clouds"></div>
+
+<div class="rain">
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 48; --y: 72; --o: 0.9421761265464663; --a: 0.7690475058363366; --d: 0.26188566194870555; --s: 0.2516564899302258">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 74; --y: 48; --o: 0.38690348332120905; --a: 0.8007055915802177; --d: -0.23732321112625865; --s: 0.9628455467053751">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 31; --y: 13; --o: 0.0018476759424039813; --a: 1.022608119939688; --d: -0.36566333053268707; --s: 0.8857388749165045">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 47; --y: 78; --o: 0.8031783621508188; --a: 0.5354979098046062; --d: 0.5415861623830054; --s: 0.6716688162247006">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 56; --y: 76; --o: 0.1721445917545681; --a: 0.5232119459149163; --d: 0.8743376192096877; --s: 0.5919376004352555">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 78; --y: 50; --o: 0.6603097774925384; --a: 1.4086585940703433; --d: 0.3322081370942751; --s: 0.16474704826566455">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 55; --y: 81; --o: 0.38184680055775466; --a: 1.4328261914477392; --d: -0.7212782682603898; --s: 0.5799569306418406">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 18; --y: 70; --o: 0.24081178323220165; --a: 0.8392876236971771; --d: 0.543455048411488; --s: 0.8015754662340537">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 9; --y: 44; --o: 0.830172859745822; --a: 0.8136544182015002; --d: -0.8336640433128673; --s: 0.30531156582785246">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 25; --y: 52; --o: 0.8897048404946226; --a: 1.4101200764102435; --d: 0.15566458629757207; --s: 0.9532361696874758">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 25; --y: 45; --o: 0.4716880680822706; --a: 1.3890286607440232; --d: 0.17198134710220048; --s: 0.41236163490372535">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 29; --y: 40; --o: 0.3669602207269047; --a: 0.6799752808346897; --d: -0.5494410299867578; --s: 0.7208739142843981">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 46; --y: 22; --o: 0.7364695007437705; --a: 0.7814239030675285; --d: 0.6704333138863832; --s: 0.5868378932953751">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 74; --y: 37; --o: 0.5472089439882983; --a: 0.9827384463240432; --d: -0.07330810920050634; --s: 0.25765903141794944">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 75; --y: 72; --o: 0.422605405086695; --a: 0.9613216684398771; --d: 0.3195862051754408; --s: 0.20675586634844922">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 89; --y: 3; --o: 0.3427433647112854; --a: 0.5336201591431773; --d: 0.6147109433500959; --s: 0.8898804364632362">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 27; --y: 92; --o: 0.7569842832168752; --a: 1.075056641921272; --d: 0.48172496197482184; --s: 0.28751676111532043">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 70; --o: 0.6921352303247537; --a: 1.1185861363612415; --d: 0.8514882955129419; --s: 0.18762520080455625">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 63; --y: 19; --o: 0.647203709307109; --a: 1.1374969740149463; --d: 0.17128958128509808; --s: 0.9425258373786785">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 94; --y: 76; --o: 0.4850205554275091; --a: 0.7819271047545249; --d: -0.638717150109879; --s: 0.3002724846815037">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 81; --y: 75; --o: 0.7249474118700059; --a: 0.772602705821795; --d: 0.19695362953220075; --s: 0.8581326041939326">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 64; --y: 26; --o: 0.7773518740410983; --a: 1.4140917552561325; --d: -0.9063579673056323; --s: 0.32610877720834">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 48; --y: 95; --o: 0.5183392813266672; --a: 0.766031528472634; --d: -0.5339441345547331; --s: 0.97066206100933">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 72; --y: 19; --o: 0.7771929864163323; --a: 0.7045051760585403; --d: 0.055703987881694506; --s: 0.43182693327129074">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 20; --y: 53; --o: 0.41755245241703576; --a: 1.0061139687414913; --d: -0.787818016493508; --s: 0.3938455574301152">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 85; --y: 43; --o: 0.4671364856006379; --a: 0.5944801717250667; --d: 0.8441721235448276; --s: 0.13926408789980882">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 85; --y: 19; --o: 0.16592380569861676; --a: 0.737023371244838; --d: -0.2243906356623846; --s: 0.6374478325111759">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 53; --y: 86; --o: 0.18248301237224807; --a: 0.9516295796619649; --d: 0.4778833091318493; --s: 0.3273170727731165">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 15; --y: 13; --o: 0.7386711510263364; --a: 0.8141315933757647; --d: 0.8578929907976978; --s: 0.09033854795721741">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 80; --y: 57; --o: 0.9424147219342227; --a: 0.6918980267468164; --d: -0.33650360576850025; --s: 0.17588463835225743">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 94; --y: 33; --o: 0.2652277833057324; --a: 1.1978909541964156; --d: -0.029845106053513426; --s: 0.9209208662067372">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 81; --y: 55; --o: 0.5270523842819119; --a: 0.8875777028779344; --d: 0.1125088741043676; --s: 0.6570409859657076">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 88; --y: 14; --o: 0.35531850129701104; --a: 1.1436718517577165; --d: -0.2692275906737369; --s: 0.38651414017060004">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 76; --y: 2; --o: 0.8892755683935998; --a: 1.4901290067837751; --d: -0.46778765809336287; --s: 0.7922508063315856">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 45; --y: 83; --o: 0.3728002297055324; --a: 1.0766644599424056; --d: -0.6789436583944131; --s: 0.891126915158893">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 22; --y: 95; --o: 0.2559568671619319; --a: 1.345926453643805; --d: -0.6360879618581712; --s: 0.6723857346133431">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 37; --y: 16; --o: 0.8446056458001288; --a: 1.3762135593434528; --d: 0.3933669423508719; --s: 0.9250349695092794">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 6; --y: 11; --o: 0.2790899622720766; --a: 1.0281065539356369; --d: -0.9815755466976461; --s: 0.6675490362367413">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 43; --y: 94; --o: 0.9122818067680267; --a: 1.0793713987514901; --d: -0.7298103875389259; --s: 0.49186930581211175">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 18; --y: 79; --o: 0.952233080079028; --a: 0.6497471473795364; --d: 0.5270028327537197; --s: 0.19248066302517297">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 79; --y: 98; --o: 0.7098119870762656; --a: 0.8780619099595117; --d: -0.690747988485156; --s: 0.517564149169726">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 11; --y: 79; --o: 0.017420270489391765; --a: 0.7794536991859464; --d: 0.11375231802479036; --s: 0.8240660559107631">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 62; --y: 16; --o: 0.15784294735732707; --a: 0.5199158220469997; --d: -0.8864488266640396; --s: 0.5062865661640683">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 91; --y: 32; --o: 0.2391783617298795; --a: 0.6030005760672512; --d: 0.4565211805008773; --s: 0.6780328814106154">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 68; --y: 28; --o: 0.9006570592319971; --a: 0.5442339964093157; --d: 0.1456326240731487; --s: 0.9062624508340031">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 3; --y: 17; --o: 0.3061107894933597; --a: 0.5358952780011088; --d: -0.6931983529055197; --s: 0.39181224026234807">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 82; --y: 22; --o: 0.3812846588433514; --a: 0.555999438718721; --d: 0.05397818344800287; --s: 0.6920032769455662">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 53; --o: 0.7358137477791016; --a: 1.0173962941791344; --d: 0.9787842681491687; --s: 0.2122376334915601">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 19; --y: 9; --o: 0.3166547364182999; --a: 0.9372534943832553; --d: 0.41165674692690546; --s: 0.054087142704200675">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 82; --y: 62; --o: 0.814342337007085; --a: 0.5996506705030609; --d: -0.6669521598555175; --s: 0.657553625974385">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 92; --o: 0.728522355853195; --a: 0.7910635608428704; --d: -0.97024203483228; --s: 0.3097323207303293">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 3; --y: 82; --o: 0.1349254818371708; --a: 0.7525922879913616; --d: 0.5148669814389395; --s: 0.7614634351954108">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 53; --y: 30; --o: 0.9036373055043345; --a: 0.5136720735089977; --d: -0.5508792720193192; --s: 0.07372559986010985">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 58; --y: 6; --o: 0.6010139135607153; --a: 1.4944011529975068; --d: 0.5288933860134932; --s: 0.6212687055389967">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 90; --y: 87; --o: 0.8963090050877509; --a: 1.29964134523625; --d: 0.31747138629443583; --s: 0.4073952494010247">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 59; --y: 93; --o: 0.34814801048628174; --a: 0.5262552134300515; --d: -0.8257979659065828; --s: 0.26552180343035414">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 72; --y: 81; --o: 0.37793255315919216; --a: 1.4118614427686074; --d: -0.1230651981699884; --s: 0.7691166837253016">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 42; --y: 56; --o: 0.16745970738340432; --a: 0.978592246960269; --d: -0.10404845796795792; --s: 0.48825531678044687">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 81; --y: 65; --o: 0.36636998266223664; --a: 1.0971450071034061; --d: -0.3725770513007509; --s: 0.45660230351970754">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 83; --y: 48; --o: 0.2511795655809643; --a: 1.3393115896497954; --d: 0.7018383287570469; --s: 0.1033444504646952">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 58; --o: 0.5154897234098637; --a: 0.6294654868535621; --d: -0.7202576388470394; --s: 0.651362614861777">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 19; --y: 95; --o: 0.4404757867224318; --a: 1.2061335077272526; --d: 0.3005221806881746; --s: 0.4730303788858592">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 46; --y: 22; --o: 0.92731328371855; --a: 1.1735463716311207; --d: -0.573188670299488; --s: 0.6313180007601531">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 33; --y: 59; --o: 0.0760831677159517; --a: 1.0322824733764164; --d: 0.9490660152049308; --s: 0.6405794409882883">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 64; --y: 11; --o: 0.18616897930501142; --a: 0.960859451213385; --d: 0.2332686852085586; --s: 0.6619327372559787">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 7; --y: 54; --o: 0.5738703063669992; --a: 1.3393704662310157; --d: 0.7551900489630006; --s: 0.38958374687572483">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 3; --y: 23; --o: 0.1792661069768673; --a: 1.4839604995772306; --d: 0.6805057535895691; --s: 0.7853143093894368">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 89; --y: 65; --o: 0.6534727494720751; --a: 1.4119939695073875; --d: -0.0589136571936435; --s: 0.7080545594484662">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 52; --y: 33; --o: 0.5380981389309141; --a: 0.7391278607931213; --d: 0.13570502927594363; --s: 0.7377071458386533">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 99; --y: 0; --o: 0.757874160046403; --a: 1.3754922312733826; --d: 0.324584375774549; --s: 0.4905582909680657">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 76; --y: 74; --o: 0.8885690687209835; --a: 0.7179674407136603; --d: 0.705843224119429; --s: 0.1837072086395728">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 10; --y: 6; --o: 0.6343295173560579; --a: 1.478623662913138; --d: 0.6215991000239658; --s: 0.7370693132526331">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 54; --y: 22; --o: 0.6774000075186761; --a: 1.3721886027990422; --d: 0.3826140787734862; --s: 0.6410360092493721">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 18; --y: 66; --o: 0.010748458650182702; --a: 0.9084248262019607; --d: -0.7786001059282714; --s: 0.6823581282359092">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 94; --y: 26; --o: 0.9023117229164677; --a: 0.6007336069220619; --d: 0.28691061916937555; --s: 0.953070677142021">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 58; --y: 64; --o: 0.5169058701272797; --a: 1.0936245579913755; --d: 0.9376077462501389; --s: 0.9992191271024093">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 44; --y: 96; --o: 0.3758159758216568; --a: 1.4399779321438817; --d: 0.3861906844900771; --s: 0.22787207160061973">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 4; --y: 10; --o: 0.9907044079071716; --a: 0.890809358744427; --d: 0.4762552132869229; --s: 0.9448876072294325">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 17; --y: 61; --o: 0.9216391262031882; --a: 0.5321833479883804; --d: 0.4422982589491524; --s: 0.9360689367213022">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 73; --y: 50; --o: 0.38071350524205494; --a: 1.2861468986273021; --d: 0.9486609262946843; --s: 0.3279016482921413">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 20; --y: 15; --o: 0.05414773482133417; --a: 0.7172789708030587; --d: 0.41563953407069487; --s: 0.4434974133719132">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 83; --y: 2; --o: 0.4440649318396557; --a: 1.22777388117251; --d: 0.19936688467671537; --s: 0.6084748171536598">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 18; --y: 8; --o: 0.7658992859642282; --a: 1.4566536117917843; --d: -0.6294014159597063; --s: 0.832067854023177">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 6; --y: 24; --o: 0.5575868654625094; --a: 1.4773937805600756; --d: 0.5643579333141533; --s: 0.4178669866884548">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 95; --y: 18; --o: 0.27059872383201666; --a: 1.0339757065025648; --d: -0.6012570867416707; --s: 0.9965863547271665">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 46; --y: 95; --o: 0.1819878433053037; --a: 1.202783753127722; --d: 0.5534790415815061; --s: 0.16381768736399094">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 40; --y: 60; --o: 0.72766796139738; --a: 1.1392509359477156; --d: -0.5982276997500109; --s: 0.7359625308908404">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 99; --y: 98; --o: 0.9252233402399304; --a: 0.6170332479313558; --d: -0.6763255966330508; --s: 0.9452632392768863">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 5; --y: 53; --o: 0.7266958044810004; --a: 1.4989708486829634; --d: -0.5404428701838082; --s: 0.575074236065541">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 79; --y: 70; --o: 0.7277558766556633; --a: 0.7209068791647228; --d: -0.09734083592236109; --s: 0.24581855066001146">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 59; --y: 11; --o: 0.6897489103920531; --a: 1.4606441671186676; --d: 0.14505525672095; --s: 0.38396275286274695">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 54; --y: 51; --o: 0.28496661785403155; --a: 1.1934965242392552; --d: -0.5556543454467344; --s: 0.8435243808669346">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 62; --y: 56; --o: 0.5882713375689721; --a: 0.6144174464444743; --d: 0.5354934477720126; --s: 0.8154480499217869">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 59; --y: 10; --o: 0.18804320128301644; --a: 1.325890537598225; --d: -0.4849146282059813; --s: 0.059191181158331885">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 82; --y: 40; --o: 0.3204797391809333; --a: 0.6890028736621392; --d: 0.8822862082396887; --s: 0.20628582884815727">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 31; --y: 31; --o: 0.8861694318060516; --a: 0.7206381017195969; --d: 0.34638320558007285; --s: 0.05025382011229551">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 10; --y: 50; --o: 0.7363350574539271; --a: 1.450863935019815; --d: 0.8794011468842964; --s: 0.007508040449317299">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 38; --y: 68; --o: 0.41121883916441293; --a: 1.3691429012904421; --d: -0.42530822913020483; --s: 0.11907083236382676">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 48; --y: 0; --o: 0.2501939829912294; --a: 0.8313453303324372; --d: 0.22540367396765104; --s: 0.6863056904273166">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 89; --y: 14; --o: 0.6102397617815307; --a: 1.0369118682687177; --d: -0.21704591672280626; --s: 0.902501468690333">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 32; --y: 76; --o: 0.9549789889933751; --a: 1.150133083916297; --d: -0.2977921851296963; --s: 0.12285958276546549">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 45; --y: 98; --o: 0.8926144147755666; --a: 0.8596844993686483; --d: 0.7592821956145128; --s: 0.6398322726166914">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 43; --y: 16; --o: 0.8294985965967536; --a: 1.1151069866321521; --d: 0.3044130651779615; --s: 0.5143665932941808">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 55; --y: 1; --o: 0.32816503660968976; --a: 1.3185578020821325; --d: 0.04731226293927593; --s: 0.596283889909397">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 39; --y: 71; --o: 0.6613299229022664; --a: 1.058382817103411; --d: -0.0293571096815044; --s: 0.42856557642912074">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 35; --y: 85; --o: 0.23089310304700983; --a: 0.6056433895726698; --d: -0.9725124504617386; --s: 0.5551920638806311">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 22; --y: 76; --o: 0.9094301543444434; --a: 1.1661171326391175; --d: 0.4879257642995447; --s: 0.7437154849009742">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 22; --y: 31; --o: 0.8856459353393227; --a: 1.1503566558131157; --d: 0.9971434431142825; --s: 0.8723809153522433">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 21; --y: 94; --o: 0.6556724762783095; --a: 0.7431312094691638; --d: 0.7917612760788311; --s: 0.23996983750011514">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 76; --y: 43; --o: 0.22576493882536375; --a: 1.1816394291845624; --d: 0.09092357390717742; --s: 0.27921401455066586">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 30; --y: 85; --o: 0.17449137366815104; --a: 1.4005509691932188; --d: 0.011144708189489538; --s: 0.8296842218872911">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 33; --y: 23; --o: 0.11652069663003406; --a: 1.1092254802926893; --d: -0.68422205905759; --s: 0.6529711581317612">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 66; --y: 29; --o: 0.2418026769570003; --a: 0.6991955366827238; --d: -0.41229098650105955; --s: 0.6462802722650542">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 19; --y: 93; --o: 0.9154374850214058; --a: 0.7936998976371852; --d: 0.8165302965270311; --s: 0.40735230403440736">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 72; --y: 45; --o: 0.7929608830524353; --a: 1.3491317484754959; --d: -0.5186156798089403; --s: 0.15492949045384852">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 24; --y: 14; --o: 0.09274674028425456; --a: 0.7788645570995316; --d: -0.5090793538411402; --s: 0.3514808566820635">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 39; --y: 19; --o: 0.3271838460071619; --a: 1.171262476888644; --d: -0.2678631193580694; --s: 0.3085839415986309">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 97; --y: 61; --o: 0.2614056054732785; --a: 1.1475453951287709; --d: -0.1493500361226543; --s: 0.004688594527926915">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 61; --y: 85; --o: 0.2487460946982698; --a: 0.8868739045124492; --d: -0.8702863936864111; --s: 0.4479956632708191">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 9; --y: 75; --o: 0.9991674606609104; --a: 1.109906272609279; --d: -0.19658636558661424; --s: 0.6699530265594016">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 31; --y: 53; --o: 0.6142002668444009; --a: 1.1330748415351446; --d: 0.3699463288221394; --s: 0.6481792519994245">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 78; --y: 43; --o: 0.20950324208646354; --a: 0.7203021508828764; --d: -0.20775546814553758; --s: 0.5433220668254899">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 86; --y: 41; --o: 0.4941749324642297; --a: 1.406195514334638; --d: -0.015168451293288587; --s: 0.7932874350339489">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 26; --y: 85; --o: 0.4048014855564912; --a: 0.6859706126874932; --d: 0.6299158563921017; --s: 0.34096940255297814">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 58; --y: 49; --o: 0.6132323108392097; --a: 0.9045693309100089; --d: 0.6864583908489132; --s: 0.06925268562706322">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 76; --y: 40; --o: 0.8626597490720482; --a: 0.5688110194098164; --d: -0.820035015917985; --s: 0.5370552017866337">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 2; --y: 51; --o: 0.9692081800606251; --a: 0.7327149213328108; --d: -0.12583811915153964; --s: 0.6142817480540999">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 61; --y: 17; --o: 0.7489900660166804; --a: 0.7567173028447631; --d: -0.4089065290267264; --s: 0.516034073214547">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 56; --y: 19; --o: 0.5714162827013218; --a: 0.7317610495822928; --d: 0.658665296925721; --s: 0.05662797456313973">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 25; --y: 12; --o: 0.6637578943643141; --a: 0.6692266030520164; --d: 0.07797242260550608; --s: 0.7017924864804996">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 62; --y: 34; --o: 0.020000548167556476; --a: 0.6311629398569143; --d: 0.7203812531379974; --s: 0.35374088918645885">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 96; --y: 87; --o: 0.44442866503400524; --a: 0.9068666426589669; --d: -0.5284967071336468; --s: 0.6867345551721513">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 15; --y: 77; --o: 0.7109429061631447; --a: 1.3953000997746265; --d: 0.1981458165056389; --s: 0.9143814549214362">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 31; --y: 56; --o: 0.5661491536419163; --a: 1.2364272763807311; --d: 0.6139251915604689; --s: 0.14660696294475284">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 83; --o: 0.4305458782363636; --a: 1.1058687121103168; --d: -0.5224164053671485; --s: 0.29966436817969866">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 98; --y: 57; --o: 0.3452130809371001; --a: 0.5967718156636872; --d: -0.7426172789123306; --s: 0.0682889415413479">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 39; --y: 80; --o: 0.7923784718591655; --a: 1.3650717565116621; --d: -0.1619159011957776; --s: 0.852497985612136">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 16; --y: 95; --o: 0.024634820113755174; --a: 1.4117397195764363; --d: -0.7855861295531703; --s: 0.8232604418142597">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 34; --y: 31; --o: 0.2149181662891564; --a: 0.5112307539428418; --d: 0.016750268405774538; --s: 0.5242989095803516">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 21; --y: 76; --o: 0.8633623339984604; --a: 1.4503008027131137; --d: -0.8494967846195478; --s: 0.7174890449540854">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 13; --y: 29; --o: 0.48621703031332886; --a: 0.5183297641286648; --d: -0.07967900017385166; --s: 0.7163777081748985">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 60; --y: 24; --o: 0.7941139264073638; --a: 0.8616646124435721; --d: -0.3696573307302633; --s: 0.41271509027054054">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 14; --y: 65; --o: 0.18146677439596748; --a: 1.4668493800395301; --d: -0.12752873603807258; --s: 0.6889993140000414">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 59; --y: 22; --o: 0.49969194734944766; --a: 0.9115393368887601; --d: 0.12900651078293857; --s: 0.3547136350954563">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 73; --y: 12; --o: 0.9454371118796718; --a: 1.2500248164393017; --d: 0.1061946746134863; --s: 0.06261198109332211">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 62; --y: 24; --o: 0.5088200736432495; --a: 1.3784877498522772; --d: -0.8787237581443423; --s: 0.8076424755285498">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 22; --y: 55; --o: 0.5661395959192905; --a: 1.2675683323636247; --d: -0.81751054172436; --s: 0.5279034767305293">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 86; --y: 68; --o: 0.9810363691286292; --a: 0.8344069719572362; --d: -0.9142585654944204; --s: 0.9864718485248838">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 58; --y: 76; --o: 0.8043773916251935; --a: 0.6460018365915154; --d: 0.06053148136118036; --s: 0.03637834431601017">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+  <svg class="rain__drop" preserveAspectRatio="xMinYMin" viewBox="0 0 5 50" style="--x: 65; --y: 93; --o: 0.04962626356341793; --a: 1.0190020090336664; --d: -0.3229925942088143; --s: 0.8188742417053898">
+    <path stroke="none" d="M 2.5,0 C 2.6949458,3.5392017 3.344765,20.524571 4.4494577,30.9559 5.7551357,42.666753 4.5915685,50 2.5,50 0.40843152,50 -0.75513565,42.666753 0.55054234,30.9559 1.655235,20.524571 2.3050542,3.5392017 2.5,0 Z"></path>
+  </svg>
+</div>
